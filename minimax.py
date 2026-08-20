@@ -1,11 +1,9 @@
-
-
-
-
-
 import math
-
+count=0
 def minimax(scores,currDepth,nodeIndex,maxTurn,targetDepth):
+    global count
+
+    count+=1
     if currDepth==targetDepth:
         return scores[nodeIndex]
 
@@ -26,3 +24,14 @@ scores=[int(input(f"Score for leaf {i} :")) for i in range(n)]
 treeDepth=math.log2(n)
 
 print(f"The optimal value is :{minimax(scores,0,0,True,treeDepth)}")
+print(f"Total evaluated node is {count}")
+
+
+
+
+
+
+
+
+
+
